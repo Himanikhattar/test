@@ -7,7 +7,6 @@ from django.http import JsonResponse
 
 def userlist(request):
     all_users = UserDB.objects.values('auto_increment_id','name')
-    print all_users
     response_data = {}
     res_data = []
     for obj in all_users:
@@ -60,15 +59,3 @@ def user_create(request):
         return JsonResponse({"status": 'User Created'})
     else:
         return JsonResponse({"Status": "Unsucessful"})
-
-# def usercreate(request):
-#     if request.method == "POST":
-#         name = request.POST.get('Name')
-                
-#         user_create = UserDB.objects.create(name = name, phone = phone, city = city, gender = gender, about_me = about_me)
-#         user_create.save()
-
-#         return JsonResponse({"status": 'User Created'})
-#     else:
-#         return JsonResponse({"Status": "Unsucessful"})
-
