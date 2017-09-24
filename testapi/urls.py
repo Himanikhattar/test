@@ -18,12 +18,8 @@ urlpatterns = [
     ),
     url(
         regex=r'^/$',
-        view=views.usercreate,
+        view=views.user_create,
         name="userdetails"
     ),
-    url(
-        regex=r'^(?P<user_id>\d+)/$',
-        view=views.userdelete,
-        name="userdetails"
-        )
+    
     ]

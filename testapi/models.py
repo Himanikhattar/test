@@ -14,5 +14,5 @@ class UserDB(models.Model):
         ('M','Male'),
         ('F','female')
         )
-	gender = models.CharField(choices=GENDER_CHOICES,max_length=30 ,null=True, blank=True)
-	about_me = models.TextField(null=True,help_text="tell others more about yourself")
+	gender = models.CharField(choices=GENDER_CHOICES,max_length=10 ,null=True, blank=True)
+	about_me = models.TextField(null=True)
